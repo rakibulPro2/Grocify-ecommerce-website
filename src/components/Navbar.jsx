@@ -13,7 +13,7 @@ const Navbar = () => {
         setShowMenu(!showMenu)
     }
   return (
-    <header className=' shadow-xl'>
+    <header className=' bg-white fixed top-0 left-0 right-0 z-50 shadow-xl mb-5'>
         <nav className='max-w-[1300px] md:h-[14vh] h-[12vh] mx-auto flex justify-between items-center px-10'>
             {/* logo */}
             <a href="" className='text-3xl font-bold'>Gr<span className='text-orange-500 uppercase'>o</span>cify</a>
