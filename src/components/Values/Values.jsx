@@ -39,7 +39,7 @@ const Values = () => {
     <section>
         <div className="max-w-[1300px] px-10 mx-auto py-20">
             <HeadinLine highlight = "Our" heading = "Value" />
-            <div className="flex">
+            <div className="flex flex-col md:flex">
                 {/* left side value  */}
                 <div className="flex flex-col justify-between">
                     {leftValues}
