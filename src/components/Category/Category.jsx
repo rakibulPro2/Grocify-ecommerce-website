@@ -18,8 +18,9 @@ const Category = () => {
         </div>
         <div className='bg-zinc-100  pt-16 p-8'>
           <h4 className='text-zinc-800 text-xl font-semibold text-center mb-4'>{cat.title}</h4>
-          <p>{cat.description}</p>
-          <Button content= "See All" />
+          <p className='text-zinc-800 md:text-md text-sm mb-4'>{cat.description}</p>
+          <div className="text-center"><Button content= "See All Product" /></div>
+          
         </div>
       </div>
     )
@@ -27,11 +28,11 @@ const Category = () => {
 
   return (
     <section>
-        <div className="max-w-[1300px] mx-auto px-10 py-20">
+        <div className="max-w-[1300px] mx-auto md:px-10 md:py-20 px-7 py-10">
           <HeadinLine highlight = "Shop" heading = "by Category" />
 
         {/* Category cards */}
-        <div className="flex items-center justify-center gap-12">
+        <div className="flex md:flex-row flex-col items-center justify-center gap-12">
           {renderCard}
         </div>
         </div>
