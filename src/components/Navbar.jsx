@@ -8,12 +8,13 @@ import { IoSearch } from 'react-icons/io5'
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
 
     const togleMenu = () =>{
         setShowMenu(!showMenu)
     }
   return (
-    <header className=' bg-white fixed top-0 left-0 right-0 z-50 shadow-xl mb-5'>
+    <header className=' bg-white fixed top-0 left-0 right-0 z-50 shadow-xl'>
         <nav className='max-w-[1300px] md:h-[14vh] h-[12vh] mx-auto flex justify-between items-center px-10'>
             {/* logo */}
             <a href="" className='text-3xl font-bold'>Gr<span className='text-orange-500 uppercase'>o</span>cify</a>
