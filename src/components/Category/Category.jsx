@@ -10,9 +10,9 @@ import Button from '../Button/Button'
 
 const Category = () => {
 
-  const renderCard = categories.map((cat, index) =>{
+  const renderCard = categories.map((cat) =>{
     return(
-      <div className='flex-1 shadow-xl rounded-xl'>
+      <div key={cat.id} className='flex-1 shadow-xl rounded-xl'>
         <div>
           <img src={cat.image} alt="" />
         </div>

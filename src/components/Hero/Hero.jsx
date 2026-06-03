@@ -1,6 +1,6 @@
 import React from "react";
-import grocery from "../assets/grocery.png";
-import Button from "./Button/Button";
+import grocery from "../../assets/grocery.png";
+import Button from "../Button/Button";
 
 const Hero = () => {
   return (
@@ -13,7 +13,8 @@ const Hero = () => {
             <h2 className="md:text-6xl text-4xl font-bold my-5">Testy Organic <span className="text-orange-500">Fruits</span> & <span className="text-orange-500">Veggies</span> In Your City</h2>
 
             <p className="text-zinc-600 md:text-lg text-sm md:mb-10 mb-4">Bred for a high content of beneficial substances. Our products are all fresh and healthy.</p>
-            <Button content="Shop Now" />
+            <Button
+             content="Shop Now" />
 
           </div>
 
