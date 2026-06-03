@@ -6,7 +6,7 @@ import Product from "../Product/Product";
 const Products = () => {
     const [activeTab, setActiveTab] = useState('All')
   const TabCategories = ["All", "Fruits", "Vegetables", "Dairy", "SeaFood"];
-  const renderProducts = productsData.map((product) => {
+  const renderProducts = productsData.slice(0,8).map((product) => {
     return(
         <div>
             <Product name = {product.name} image = {product.image} price = {product.price} />
@@ -26,7 +26,7 @@ const Products = () => {
             return <button key={i} className={`md:flex-1 px-5 py-2 text-md font-semibold rounded-sm ${activeTab === category ? 'bg-orange-500 text-white' : 'bg-zinc-200'}`} onClick={()=>setActiveTab(category)}>{category}</button>;
           })}
         </div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-9 mt-15">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-9 mt-15">
             {renderProducts}
         </div>
       </div>
