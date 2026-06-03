@@ -6,7 +6,8 @@ import Product from "../Product/Product";
 const Products = () => {
     const [activeTab, setActiveTab] = useState('All')
   const TabCategories = ["All", "Fruits", "Vegetables", "Dairy", "SeaFood"];
-  const renderProducts = productsData.slice(0,8).map((product) => {
+  let filteredProductsData = activeTab === 'All' ? productsData : productsData.filter((item)=>item.category ===activeTab)
+  const renderProducts = filteredProductsData.slice(0,8).map((product) => {
     return(
         <div>
             <Product name = {product.name} image = {product.image} price = {product.price} />
