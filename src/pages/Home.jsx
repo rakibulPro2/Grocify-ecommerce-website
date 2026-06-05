@@ -5,6 +5,7 @@ import Category from "../components/Category/Category";
 import Values from "../components/Values/Values";
 import Products from "../components/Products/Products";
 import Discount from "../components/Discount/Discount";
+import Testomonials from "../components/Testomonials/Testomonials";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Values />
       <Products />
       <Discount />
+      <Testomonials />
     </>
   );
 };
