@@ -4,6 +4,7 @@ import { GoHeartFill } from 'react-icons/go'
 import { HiMenu } from 'react-icons/hi'
 import { HiShoppingBag } from 'react-icons/hi2'
 import { IoSearch } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -14,10 +15,10 @@ const Navbar = () => {
         setShowMenu(!showMenu)
     }
   return (
-    <header className=' bg-white fixed top-0 left-0 right-0 z-50 shadow-xl'>
+    <header className=' bg-white fixed relative top-0 left-0 right-0 shadow-xl'>
         <nav className='max-w-[1300px] md:h-[14vh] h-[12vh] mx-auto flex justify-between items-center px-10'>
             {/* logo */}
-            <a href="" className='text-3xl font-bold'>Gr<span className='text-orange-500 uppercase'>o</span>cify</a>
+            <Link to="/" className='text-3xl font-bold'>Gr<span className='text-orange-500 uppercase'>o</span>cify</Link>
 
             {/* desktop menu */}
             <ul className='md:flex items-center gap-x-12 hidden'>

@@ -37,32 +37,39 @@ const Testomonials = () => {
           }}
           loop={true}
           breakpoints={{
-            640: {slidesPerView: 1, spaceBetween:20},
-            768: {slidesPerView: 2, spaceBetween:20},
-            1024: {slidesPerView: 3, spaceBetween:20},
+            640: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
           }}
         >
           {CustomerReviewData.map((item) => {
             return (
-              <SwiperSlide key={item.id} className="bg-zinc-100 rounded-xl md:p-8 p-5">
+              <SwiperSlide
+                key={item.id}
+                className="bg-zinc-100 rounded-xl md:p-8 p-5"
+              >
                 <div className="flex items-center gap-5">
                   <div>
-                    <img src={item.image} className="md:w-16 w-12 md:h-16 h-12 bg-red-300 rounded-full outline-2 outline-orange-500 outline-offset-3" />
+                    <img
+                      src={item.image}
+                      className="md:w-16 w-12 md:h-16 h-12 bg-red-300 rounded-full outline-2 outline-orange-500 outline-offset-3"
+                    />
                   </div>
                   <div className="">
                     <h5 className="text-xl font-semibold">{item.name}</h5>
                     <p className="text-zinc-600 mb-2">{item.profession}</p>
-                    <span className="flex gap-1 text-sm text-orange-400">
-                        {Array.from({length: item.rating}, (_, index)=>(
-                            <FaStar />
-                        ) )}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className="flex gap-1 text-sm text-orange-400">
+                        {Array.from({ length: item.rating }, (_, index) => (
+                          <FaStar />
+                        ))}
+                      </span>
+                      <span className="text-sm">({item.rating})</span>
+                    </div>
                   </div>
                 </div>
                 <div className="md:mt-10 mt-5 min-h-[15vh]">
-                  <p className="text-zinc-600">
-                    {item.para}
-                  </p>
+                  <p className="text-zinc-600">{item.para}</p>
                 </div>
               </SwiperSlide>
             );

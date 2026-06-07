@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 const Hero = () => {
   return (
     <section>
-      <div className="min-h-screen max-w-[1300px] px-10 mx-auto md:mt-25 mt-10">
+      <div className="min-h-screen max-w-[1300px] px-10 mx-auto md:mt-10 mt-5">
         <div className="flex md:flex-row flex-col items-center mt-5">
           {/* hero left content */}
           <div className="flex-1">

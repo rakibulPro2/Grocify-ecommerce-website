@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HeadinLine from "../HeadinLine/HeadinLine";
 import productsData from "../../assets/ProductsData/ProductsData";
 import Product from "../Product/Product";
-import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 const Products = () => {
     const [activeTab, setActiveTab] = useState('All')
@@ -37,7 +37,12 @@ const Products = () => {
 
         {/* view all button */}
         <div className="w-fit mt-15 mx-auto">
-            <Button content="View All"/>
+            <Link
+              to="/all-products"
+              className="bg-gradient-to-b from-orange-400 to-orange-500 text-white md:px-6 px-4 py-2 rounded-sm hover:scale-105 hover:from-orange-600 transition-all duration-300 cursor-pointer"
+            >
+              View All
+            </Link>
      
         </div>
       </div>

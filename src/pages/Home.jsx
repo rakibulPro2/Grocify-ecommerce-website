@@ -10,7 +10,6 @@ import Testomonials from "../components/Testomonials/Testomonials";
 const Home = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <Category />
       <Values />
